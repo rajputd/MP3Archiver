@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MP3 Archiver</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>This is working!</p>
+    <table>
+        <tr>
+            <th>Artist</th>
+            <th>Year</th>
+            <th>Album</th>
+            <th>Title</th>
+        </tr>
+        <th:block th:each="song : ${songsList}">
+            <tr>
+                <td th:text="${song.artist}"></td>
+                <td th:text="${song.year}"></td>
+                <td th:text="${song.album}"></td>
+                <td th:text="${song.title}"></td>
+            </tr>
+
+        </th:block>
+    </table>
+
+</body>
+</html>
